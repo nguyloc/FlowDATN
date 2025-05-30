@@ -25,5 +25,9 @@ namespace FlowGame.States
         public void Exit()
         {
         }
+
+        public void Update()
+        {
+        }
     }
 }

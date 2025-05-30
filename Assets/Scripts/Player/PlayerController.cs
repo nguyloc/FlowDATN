@@ -5,6 +5,8 @@ namespace Player
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
     {
+        public static PlayerController Instance { get; private set; }
+        
         public float moveSpeed = 5f;
         private CharacterController controller;
 
@@ -27,9 +29,16 @@ namespace Player
             controller.Move(moveInput * moveSpeed * Time.deltaTime);
         }
 
-        public void EnableControl(bool enable)
+        public void EnableControls()
         {
-            canMove = enable;
+            canMove = true;
+            Debug.Log("Enable Controls");
+        }
+        
+        public void DisableControls()
+        {
+            canMove = false;
+            Debug.Log("Disable Controls");
         }
     }
 }

@@ -30,5 +30,12 @@ namespace FlowGame.States
             //_onComplete?.Invoke();
             //_gameFlowManager.ChangeState(new MainMenuState()); // Example of transitioning to another state
         }
+
+        public void Update()
+        {
+            // Handle any updates needed during the cutscene state
+            // This could include checking for user input or other conditions
+            // For now, we will leave it empty as the cutscene manager handles playback
+        }
     }
 }
