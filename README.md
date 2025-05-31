@@ -68,7 +68,7 @@ Tài liệu này mô tả mục đích và chức năng của các file script t
 
 ## 📁 Prefabs
 
-> (Hiện chưa thấy script - có thể chứa các đối tượng mẫu như Trigger prefab, NPC, Puzzle Object...)
+> (Tạm thời để trống - có thể chứa các đối tượng mẫu như Trigger prefab, NPC, Puzzle Object...)
 
 ---
 
