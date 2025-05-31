@@ -1,4 +1,5 @@
 ﻿using FlowGame.ChapterStory;
+using FlowGame.Mission;
 using UnityEngine;
 
 namespace FlowGame.Managers
@@ -6,6 +7,21 @@ namespace FlowGame.Managers
     public class GameFlowManager : MonoBehaviour
     {
         private IGameState _currentState;
+        
+        public CutsceneManager cutsceneManager;
+        public DialogueManager dialogueManager;
+        public PuzzleManager puzzleManager;
+        public MissionManager missionManager;
+        
+        public Chapter1 _chapter1;
+        
+        private void Start()
+        {
+            // Initialize the game state, e.g., starting with the main menu
+            // ChangeState(new MainMenuState());
+           
+            _chapter1.StartChapter();
+        }
 
         public void ChangeState(IGameState newState)
         {
@@ -14,12 +30,9 @@ namespace FlowGame.Managers
             _currentState.Enter();
         }
         
-        private void Start()
+        private void Update()
         {
-            // Initialize the game state, e.g., starting with the main menu
-            // ChangeState(new MainMenuState());
-            Chapter1 chapter1 = new Chapter1(this);
-            chapter1.StartChapter();
+            _currentState?.Update();
         }
     }
 }

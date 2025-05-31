@@ -16,6 +16,8 @@ namespace Player
         void Awake()
         {
             controller = GetComponent<CharacterController>();
+            if (Instance == null) Instance = this;
+            else Destroy(gameObject);
         }
 
         void Update()

@@ -19,15 +19,14 @@ namespace FlowGame.States
             // This could involve loading a scene, enabling player movement, etc.
             // For now, we will just log that we have entered the exploration state.
             UnityEngine.Debug.Log("Entered Exploration State");
-            PlayerController.Instance.EnableControls();
+            PlayerController.Instance?.EnableControls();
         }
 
         public void Exit()
         {
             // Clean up when exiting the exploration state, e.g., disabling player controls, saving state, etc.
             UnityEngine.Debug.Log("Exited Exploration State");
-            PlayerController.Instance.DisableControls();
-           
+            PlayerController.Instance?.DisableControls();
         }
 
         public void Update()
